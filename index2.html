@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Camisa 10 - 2019</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Camisa 10</div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Atletas</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Autores</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Sobre</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Contatos</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Camisa 10</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cadastro
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Cadastro de Atleta</a>
+                <a class="dropdown-item" href="#">Cadastro de Observador</a>
+                <a class="dropdown-item" href="#">Cadastro de Usuário</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    </head>
+    <body>
+      <p></p>
+        <div id='busca'>
+            <div class="search">
+              <input id="txtbusca" name="q" type="text" value="" placeholder="Digite o que você procura" />
+              <p></p>
+              <button onclick="buscaPorNome()" class="btn btn-dark">Pesquisar</button>
+            </div>
+            <div id="retornoTotal">
+              <!--Volta Os cadastros pesquisados aqui-->
+            </div>
+            </div>
+            <!--Formulário-->
+      <div class="container">
+        <div class="wrapper">
+          <div class="company-info">
+          </div>
+          <div class="contact">
+              <p>
+                <!--Dados do formulário-->
+                <label>Email:</label><br><input type="email" name="email" id="name" >
+              </p>
+              <p>
+                <label>Senha:</label><br>
+                <input type="password" name="senha" id="data">
+              </p>
+          <!--Botão onde fará o cadastro-->
+          <button onclick="saveMessage()" class="btn btn-dark">Cadastrar</button>
+      </p>
+      </div>
+          </div>
+        </div>
+      </div>
+    
+        </div>
+        <!--Rodapé-->
+        <main class="content" role="main">
+          <footer class="fixed_footer">
+    
+            <div class="content">
+
+                <h3>© 2019 - Camisa 10 </h3>
+              </p>
+            </div>
+          </footer>
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+	<script src="index.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>
+
