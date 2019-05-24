@@ -55,6 +55,7 @@
   border-color: rgb(238, 238, 238);
   margin-left: 5vw;
   width: 20vw;
+  margin-top: 7.5%;
 }
 
 .topo-titulo {
@@ -124,4 +125,12 @@
   border-right-width: 1px;
   border-left-width: 1px;
   border-color: rgb(238, 238, 238);
+}
+
+.search{
+  width: 150vw;
+  display: flex;
+}
+
+#txtbuscaz{
 }
