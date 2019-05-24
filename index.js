@@ -94,3 +94,27 @@ function buscaPorNome(){
 const closeContainer = (id) => {
   document.getElementById(id).style.display = 'none';
 }
+
+var refUsuarios =  bd.ref('/usuarios')
+// Reference messages collection
+
+var idUsuarios;
+
+refUsuarios.on('value', async (snapshot) => {
+  idUsuarios = await snapshot.val().length
+  console.log(`ID USUÁRIO: ${idUsuarios}`);
+  
+})
+
+
+// Save message to firebase
+function saveUser(){
+// Referenciando a Database e  a pasta onde está sendo adicionado os elementos
+  firebase.database().ref('/usuarios/'+ idUsuarios).set({
+    email:document.getElementById('email').value,
+    senha:document.getElementById('senha').value,
+
+  });
+  /*Alerta mostrado quando efetuar o cadastro*/
+  alert("Cadastrado")
+}
