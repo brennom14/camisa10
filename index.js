@@ -58,9 +58,39 @@ function buscaPorNome(){
     for (let i = 1; i < snapshot.val().length; i++) {
 
         if (snapshot.val()[i].name == nomeDesejado) {         
-            sessionStorage.id = (i).toString()
-            window.location.href = "index3.html"
+          document.getElementById('retornoTotal').innerHTML = 
+          `
+    <div id="container-busca">
+    <button onclick="closeContainer('container-busca')" class="button-close">
+      X
+    </button>
+    <h4>Nome:</h4>
+    <input disabled value="${snapshot.val()[i].name}">
+    <h4>Data:</h4>
+    <input disabled value="${snapshot.val()[i].data}">
+    <h4>CPF:</h4>
+    <input disabled value="${snapshot.val()[i].cpf}">
+    <h4>Sexo:</h4>
+    <input disabled value="${snapshot.val()[i].sexo}">
+    <h4>Altura:</h4>
+    <input disabled value="${snapshot.val()[i].altura}">
+    <h4>Posição:</h4>
+    <input disabled value="${snapshot.val()[i].posição}">
+    <h4>Peso:</h4>
+    <input disabled value="${snapshot.val()[i].peso}">
+    <h4>Email:</h4>
+    <input disabled value="${snapshot.val()[i].email}">
+    <h4>Celular:</h4>
+    <input disabled value="${snapshot.val()[i].celular}">
+    <h4>Telefone:</h4>
+    <input disabled value="${snapshot.val()[i].telefone}">
+  </div>
+  `
         }
     }
 })
+}
+
+const closeContainer = (id) => {
+  document.getElementById(id).style.display = 'none';
 }
