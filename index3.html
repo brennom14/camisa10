@@ -15,6 +15,8 @@
 
   <!-- Custom styles for this template -->
   <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style2.css" rel="stylesheet">
 
 </head>
 
@@ -24,7 +26,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Camisa 10</div>
+      <h2><a href="index.html">Camisa 10</a></h2>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Atletas</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Autores</a>
@@ -40,14 +42,16 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <button class="btn btn-primary" id="menu-toggle">Camisa 10</button>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Cadastro
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -59,33 +63,47 @@
           </ul>
         </div>
       </nav>
-    <!-- /#page-content-wrapper -->
+      <!-- /#page-content-wrapper -->
+
+      <div id="retornoTotal">
+        <h4>Nome:</h4>
+        <input>
+        <h4>Data:</h4>
+        <input>
+        <h4>CPF:</h4>
+        <input>
+        <h4>Sexo:</h4>
+        <input>
+        <h4>Altura:</h4>
+        <input>
+        <h4>Posição:</h4>
+        <input>
+        <h4>Peso:</h4>
+        <input>
+        <h4>Email:</h4>
+        <input>
+        <h4>Celular:</h4>
+        <input>
+        <h4>Telefone:</h4>
+        <input>
+
+        <button onclick="editar()">Salvar Alterações</button>
+        <button onclick="excluir()">Excluir</button>
+      </div>
+    </div>
 
   </div>
-  <form action="/action_page.php">
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Senha:</label>
-      <input type="password" class="form-control" id="pwd">
-    </div>
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox"> Lembrar senha
-      </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
-  </form>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="index3.js"></script>
 
   <!-- Menu Toggle Script -->
   <script>
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });

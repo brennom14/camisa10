@@ -11,7 +11,7 @@ var config = {
 firebase.initializeApp(config);
 var bd = firebase.database()
 
-var ref = bd.ref('/jogadores')
+var ref = bd.ref('/jogadores/' + sessionStorage.id)
 // Reference messages collection
 
 
@@ -51,45 +51,44 @@ function carregar() {
 
 
 function retornaHtml(name, data, cpf, sexo, altura, posição, peso, email, senha,conf2,celular,telefone) {
-  document.getElementById('retornoTotal').innerHTML =
-    `
-    <div class="container">
-      <h4>Nome:</h4>
-     <input value="${name}"><br>
-     <p></p>
-     <h4>Data:</h4>
-     <input value="${data}"><br>
-     <p></p>
-     <h4>CPF:</h4>
-     <input value="${cpf}"><br>
-     <p></p>
-     <h4>Sexo:</h4>
-     <input value="${sexo}"><br>
-     <p></p>
-     <h4>Altura:</h4>
-     <input value="${altura}"><br>
-     <p></p>
-     <h4>Posição:</h4>
-     <input value="${posição}"><br>
-     <p></p>
-     <h4>Peso:</h4>
-     <input value="${peso}"><br>
-     <p></p>
-     <h4>Email:</h4>
-     <input value="${email}"><br>
-     <p></p>
-     <h4>Senha:</h4>
-     <input value="${senha}"><br>
-     <p></p>
-     <h4>Confirmação de senha:</h4>
-     <input value="${senha}"><br>
-     <p></p>
-     <h4>Celular:</h4>
-     <input value="${celular}"><br>
-     <p></p>
-     <h4>Telefone:</h4>
-     <input value="${telefone}"><br>
-     <p></p>
-  </div>
-  `
+  console.log(name, data, cpf, sexo, altura, posição, peso, email, senha,conf2,celular,telefone);
+  
+  document.getElementsByTagName('input')[0].value = name
+  document.getElementsByTagName('input')[1].value = data
+  document.getElementsByTagName('input')[2].value = cpf
+  document.getElementsByTagName('input')[3].value = sexo
+  document.getElementsByTagName('input')[4].value = altura
+  document.getElementsByTagName('input')[5].value = posição
+  document.getElementsByTagName('input')[6].value = peso
+  document.getElementsByTagName('input')[7].value = email
+  document.getElementsByTagName('input')[8].value = celular
+  document.getElementsByTagName('input')[9].value = telefone
 }
+
+
+async function editar(){
+  console.log(document.getElementsByTagName('input')[3]);
+
+  await bd.ref("/jogadores/" + sessionStorage.id).set({
+    name: document.getElementsByTagName('input')[0].value,
+    data: document.getElementsByTagName('input')[1].value,
+    cpf: document.getElementsByTagName('input')[2].value,
+    sexo: document.getElementsByTagName('input')[3].value,
+    altura: document.getElementsByTagName('input')[4].value,
+    posição: document.getElementsByTagName('input')[5].value,
+    peso: document.getElementsByTagName('input')[6].value,
+    email: document.getElementsByTagName('input')[7].value,
+    calular: document.getElementsByTagName('input')[8].value,
+    telefone: document.getElementsByTagName('input')[9].value
+
+  });
+  
+  alert("Atualizado")
+}
+
+async function excluir(){
+  await bd.ref("/jogadores/" + sessionStorage.id).remove()
+  alert("Excluido")
+}
+
+console.log(sessionStorage.id);

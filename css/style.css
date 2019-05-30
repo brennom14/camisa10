@@ -137,3 +137,26 @@ label{
 footer{
 	background-color: #111;
 }
+.page-footer{
+background: #222;
+padding: 5px;
+height: 45vh;
+}
+
+.row{
+  margin-top: -22.5vh;
+}
+
+.footer-copyright{
+  margin-top: -10vh;
+}
+a:link{
+  text-decoration: none;
+}
+a{
+  color: #111;
+}
+a:hover{
+  text-decoration: none;
+  color: aquamarine;
+}

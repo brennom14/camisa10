@@ -167,7 +167,7 @@
   padding-left: 1vw;
   box-sizing: border-box;
   background-color: #fff;
-  border: solid 0.5px rgb(160, 160, 160);
+  border: solid 1px rgb(160, 160, 160);
 }
 
 .button-close {
@@ -180,7 +180,7 @@
   border-radius: 50%;
   border: none;
   color: rgb(0, 0, 0);
-  font-size: 1.5vw;
+  font-size: 1vw;
   font-weight: bold;
   cursor: pointer;
 }
