@@ -11,89 +11,71 @@ var config = {
 firebase.initializeApp(config);
 var bd = firebase.database()
 
-var ref =  bd.ref('/jogadores')
+var ref = bd.ref('/jogadores')
 // Reference messages collection
 
 
 // Save message to firebase
-function saveMessage(){
-// Referenciando a Database e  a pasta onde está sendo adicionado os elementos
-  firebase.database().ref('/jogadores/' + id).set({
-    name:document.getElementById('name').value,
-    data:document.getElementById('data').value,
-    cpf:document.getElementById('cpf').value,
-    sexo:document.getElementById('sexo').value,
-    altura:document.getElementById('altura').value,
-    posição:document.getElementById('posição').value,
-    peso:document.getElementById('peso').value,
-    email:document.getElementById('email').value,
-    senha:document.getElementById('senha').value,
-    conf2:document.getElementById('conf2').value,
-    celular:document.getElementById('cel').value,
-    telefone:document.getElementById('tel').value
-  }); 
-  alert("Cadastrado")
-  
+function saveMessage() {
+
+  firebase.auth().createUserWithEmailAndPassword(document.getElementById('email2').value, document.getElementById('senha2').value)
+    .then(function success(userData) {
+      // console.log(userData.user.uid);
+      // Referenciando a Database e  a pasta onde está sendo adicionado os elementos
+      firebase.database().ref('/jogadores/' + userData.user.uid).set({
+        name: document.getElementById('name').value,
+        data: document.getElementById('data').value,
+        cpf: document.getElementById('cpf').value,
+        sexo: document.getElementById('sexo').value,
+        altura: document.getElementById('altura').value,
+        posição: document.getElementById('posição').value,
+        peso: document.getElementById('peso').value,
+        email: document.getElementById('email2').value,
+        conf2: document.getElementById('conf2').value,
+        celular: document.getElementById('cel').value,
+        telefone: document.getElementById('tel').value
+      });
+      alert("Cadastrado")
+    })
+
+
 }
-const db = firebase.database();
-var ref = db.ref("jogadores");
-ref.on("child_added", function(snapshot) {
-  console.log(snapshot.val());
-});
 
 
-ref.on('value', (snapshot) => {
-  id = snapshot.val().length
-  console.log(`ID: ${id}`);
-  
-})
 
-
-function buscaPorNome(){
+function buscaPorNome() {
   let nomeDesejado = document.getElementById('txtbusca').value
 
   ref.on('value', async function (snapshot) {
-    console.log(snapshot.val().length);
-    
-    for (let i = 1; i < snapshot.val().length; i++) {
-
-        if (snapshot.val()[i].name == nomeDesejado) {         
-          sessionStorage.id = i
-          window.location.href="index3.html";
-        }
-    }
-})
+    snapshot.forEach(jogador => {
+      if (jogador.val().name == nomeDesejado) {
+        sessionStorage.id = jogador.key
+        window.location.href = "index3.html";
+      }
+    });
+  })
 }
 
 
 
-var refUsuarios =  bd.ref('/usuarios')
+var refUsuarios = bd.ref('/usuarios')
 // Reference messages collection
 
-var idUsuarios;
-
-refUsuarios.on('value', async (snapshot) => {
-  idUsuarios = await snapshot.val().length
-  console.log(`ID USUÁRIO: ${idUsuarios}`);
-  
-})
 
 
 // Save message to firebase
-function saveUser(){
-// Referenciando a Database e  a pasta onde está sendo adicionado os elementos
-  firebase.database().ref('/usuarios/'+ idUsuarios).set({
-    email:document.getElementById('email').value,
-    senha:document.getElementById('senha').value,
-
-  });
+function saveUser() {
+  // Referenciando a Database e  a pasta onde está sendo adicionado os elementos
+  firebase.auth().createUserWithEmailAndPassword(document.getElementById('email').value, document.getElementById('senha').value)
   /*Alerta mostrado quando efetuar o cadastro*/
   alert("Cadastrado")
 }
 
-function funcao(event){if(event.keyCode == "13"){
-  buscaPorNome()
-}}
+function funcao(event) {
+  if (event.keyCode == "13") {
+    buscaPorNome()
+  }
+}
 
 
 document.addEventListener('keydown', funcao)

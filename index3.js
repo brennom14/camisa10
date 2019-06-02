@@ -17,42 +17,37 @@ var ref = bd.ref('/jogadores/' + sessionStorage.id)
 
 const db = firebase.database();
 var ref = db.ref("jogadores");
-ref.on("child_added", function (snapshot) {
-  console.log(snapshot.val());
-});
 
 window.onload = carregar()
 
 
 function carregar() {
   ref.once('value', async function (snapshot) {
-    console.log(snapshot.val().length);
-
-    for (let i = 1; i < snapshot.val().length; i++) {
-
-      if (i == Number(sessionStorage.id)) {
+    snapshot.forEach(jogador => {
+      if (jogador.key == sessionStorage.id) {
         retornaHtml(
-          await snapshot.val()[i].name,
-          await snapshot.val()[i].data,
-          await snapshot.val()[i].cpf,
-          await snapshot.val()[i].sexo,
-          await snapshot.val()[i].altura,
-          await snapshot.val()[i].posição,
-          await snapshot.val()[i].peso,
-          await snapshot.val()[i].email,
-          await snapshot.val()[i].senha,
-          await snapshot.val()[i].conf2,
-          await snapshot.val()[i].celular,
-          await snapshot.val()[i].telefone)
+          jogador.val().name,
+          jogador.val().data,
+          jogador.val().cpf,
+          jogador.val().sexo,
+          jogador.val().altura,
+          jogador.val().posição,
+          jogador.val().peso,
+          jogador.val().email,
+          jogador.val().senha,
+          jogador.val().conf2,
+          jogador.val().celular,
+          jogador.val().telefone
+        )
       }
-    }
+    });
   })
 }
 
 
-function retornaHtml(name, data, cpf, sexo, altura, posição, peso, email, senha,conf2,celular,telefone) {
-  console.log(name, data, cpf, sexo, altura, posição, peso, email, senha,conf2,celular,telefone);
-  
+function retornaHtml(name, data, cpf, sexo, altura, posição, peso, email, senha, conf2, celular, telefone) {
+  console.log(name, data, cpf, sexo, altura, posição, peso, email, senha, conf2, celular, telefone);
+
   document.getElementsByTagName('input')[0].value = name
   document.getElementsByTagName('input')[1].value = data
   document.getElementsByTagName('input')[2].value = cpf
@@ -66,7 +61,7 @@ function retornaHtml(name, data, cpf, sexo, altura, posição, peso, email, senh
 }
 
 
-async function editar(){
+async function editar() {
   console.log(document.getElementsByTagName('input')[3]);
 
   await bd.ref("/jogadores/" + sessionStorage.id).set({
@@ -82,11 +77,11 @@ async function editar(){
     telefone: document.getElementsByTagName('input')[9].value
 
   });
-  
+
   alert("Atualizado")
 }
 
-async function excluir(){
+async function excluir() {
   await bd.ref("/jogadores/" + sessionStorage.id).remove()
   alert("Excluido")
 }
