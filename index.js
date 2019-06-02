@@ -16,7 +16,7 @@ var ref = bd.ref('/jogadores')
 
 
 // Save message to firebase
-function saveMessage() {
+function cadastrarAtleta() {
 
   firebase.auth().createUserWithEmailAndPassword(document.getElementById('email2').value, document.getElementById('senha2').value)
     .then(function success(userData) {
@@ -33,7 +33,33 @@ function saveMessage() {
         email: document.getElementById('email2').value,
         conf2: document.getElementById('conf2').value,
         celular: document.getElementById('cel').value,
-        telefone: document.getElementById('tel').value
+        telefone: document.getElementById('tel').value,
+        tipo: 'atleta'
+      });
+      alert("Cadastrado")
+    })
+
+
+}
+
+function cadastrarObservador() {
+
+  firebase.auth().createUserWithEmailAndPassword(document.getElementById('email3').value, document.getElementById('senha3').value)
+    .then(function success(userData) {
+      // console.log(userData.user.uid);
+      // Referenciando a Database e  a pasta onde está sendo adicionado os elementos
+      firebase.database().ref('/observadores/' + userData.user.uid).set({
+        name: document.getElementById('name2').value,
+        data: document.getElementById('data2').value,
+        cpf: document.getElementById('cpf2').value,
+        sexo: document.getElementById('sexo2').value,
+        desde: document.getElementById('desde').value,
+        cidade: document.getElementById('cidade').value,
+        email: document.getElementById('email3').value,
+        conf2: document.getElementById('conf3').value,
+        celular: document.getElementById('cel2').value,
+        telefone: document.getElementById('tel2').value,
+        tipo: 'observador'
       });
       alert("Cadastrado")
     })
@@ -66,9 +92,18 @@ var refUsuarios = bd.ref('/usuarios')
 // Save message to firebase
 function saveUser() {
   // Referenciando a Database e  a pasta onde está sendo adicionado os elementos
-  firebase.auth().createUserWithEmailAndPassword(document.getElementById('email').value, document.getElementById('senha').value)
-  /*Alerta mostrado quando efetuar o cadastro*/
-  alert("Cadastrado")
+  firebase.auth().signInWithEmailAndPassword(document.getElementById('email').value, document.getElementById('senha').value)
+  .then(() => {
+    alert("Logado")
+
+    firebase.auth().onAuthStateChanged((user) => {
+      sessionStorage.idLogado = user.uid
+      window.location.href = "home.html";
+    })
+  })
+  .catch(() => {
+    alert("Ocorreu um Erro")
+  })
 }
 
 function funcao(event) {
@@ -79,3 +114,25 @@ function funcao(event) {
 
 
 document.addEventListener('keydown', funcao)
+document.getElementsByClassName('contact')[0].style.display = "none"
+document.getElementsByClassName('contact')[1].style.display = "none"
+
+document.getElementById('atleta').addEventListener('click', () => {
+  if(document.getElementsByClassName('contact')[0].style.display == "none"){
+    document.getElementsByClassName('contact')[0].style.display = "block"
+    document.getElementsByClassName('contact')[1].style.display = "none"
+  }else{
+    document.getElementsByClassName('contact')[0].style.display = "none"
+    document.getElementsByClassName('contact')[1].style.display = "block"
+  }
+})
+
+document.getElementById('observador').addEventListener('click', () => {
+  if(document.getElementsByClassName('contact')[1].style.display == "none"){
+    document.getElementsByClassName('contact')[1].style.display = "block"
+    document.getElementsByClassName('contact')[0].style.display = "none"
+  }else{
+    document.getElementsByClassName('contact')[1].style.display = "none"
+    document.getElementsByClassName('contact')[0].style.display = "block"
+  }
+})

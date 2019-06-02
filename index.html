@@ -26,7 +26,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-     <h2><a href="index.html">Camisa 10</a></h2>
+      <h2><a href="index.html">Camisa 10</a></h2>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Atletas</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Autores</a>
@@ -73,7 +73,7 @@
       <!--Formulário-->
       <div class="mrg-2">
         <div class="topo-titulo">
-          <p>CADASTRAR ACESSO</p>
+          <p>ACESSO</p>
         </div>
         <div class="container-2">
           <div class="wrapper-2">
@@ -94,11 +94,15 @@
         </div>
       </div>
     </div>
-    
+
     <!--Formulário-->
     <div class="container">
       <div class="wrapper">
         <div class="company-info"></div>
+      </div>
+      <div class="options">
+        <button id="atleta" class="btn btn-dark">Cadastrar Atleta</button>
+        <button id="observador" class="btn btn-dark">Cadastrar Observador</button>
       </div>
       <div class="contact">
         <div class="topo-titulo">
@@ -157,119 +161,183 @@
             <input type="text" name="tel" id="tel">
           </p>
           <!--Botão onde fará o cadastro-->
-          <button onclick="saveMessage()" class="btn btn-dark">Cadastrar</button>
+          <button onclick="cadastrarAtleta()" class="btn btn-dark">Cadastrar</button>
+        </p>
+      </div>
+
+      <div class="contact">
+        <div class="topo-titulo">
+          <p>CADASTRO DE OBSERVADOR</p>
+        </div>
+        <p>
+          <!--Dados do formulário-->
+          <label>Nome Completo:</label><input type="text" name="name" id="name2">
+        </p>
+        <p>
+          <label>Data de Nascimento:</label>
+          <input type="date" name="data" id="data2">
+        </p>
+        <p>
+          <label>CPF:</label>
+          <input type="text" name="cpf" id="cpf2">
+        </p>
+        <p>
+          <label>Sexo:</label>
+          <!-- <input type="text" name="sexo" id="sexo"> -->
+          <select name="" id="sexo2">
+            <option value="null">Escolha um Sexo</option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+          </select>
+        </p>
+        <p>
+          <label>Celular para contato:</label>
+          <input type="text" name="cel" id="cel2">
+        </p>
+        <p class="full">
+          <label>Telefone:</label>
+          <input type="text" name="tel" id="tel2">
+        </p>
+        <p>
+          <label for="">Cidade:</label>
+          <input id="cidade" type="text">
+        </p>
+        <p>
+          <label>Observador Desde?</label>
+          <input type="date" name="data" id="desde">
+        </p>
+        <p>
+          <label for="">Anexo para Identificação</label>
+          <input type="file" name="" id="foto">
+        </p>
+        <!-- Associados -->
+        <p>
+          <label>E-mail:</label>
+          <input type="email" name="email" id="email3">
+        </p>
+        <p>
+          <label>Senha:</label>
+          <input type="password" name="senha" id="senha3">
+        </p>
+        <p>
+          <label>Confirmação de senha:</label>
+          <input type="password" name="conf2" id="conf3">
+        </p>
+        <!--Botão onde fará o cadastro-->
+        <button onclick="cadastrarObservador()" class="btn btn-dark">Cadastrar</button>
         </p>
       </div>
     </div>
 
-  </div>  
+  </div>
   </div>
   </div>
   </div>
   <!--Rodapé-->
-    </div>
-    <!-- /#wrapper -->
-    <!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4">
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-4 mx-auto">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Camisa10</h5>
-        <p>Este é um site web produzido por Brenno Henrique e João Miguel Chaves, estudantes do IFMS Câmpus Nova Andradina.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Facebook</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">WhatsApp</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Instagram</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
   </div>
-  <!-- Footer Links -->
+  <!-- /#wrapper -->
+  <!-- Footer -->
+  <footer class="page-footer font-small stylish-color-dark pt-4">
 
-  <hr>
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
 
-  <hr>
+      <!-- Grid row -->
+      <div class="row">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href=""> Camisa10</a>
-  </div>
-  <!-- Copyright -->
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
 
-</footer>
-<!-- Footer -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-    <script src="index.js"></script>
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Camisa10</h5>
+          <p>Este é um site web produzido por Brenno Henrique e João Miguel Chaves, estudantes do IFMS Câmpus Nova
+            Andradina.</p>
 
-    <!-- Menu Toggle Script -->
-    <script>
-      $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-      });
-    </script>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Facebook</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">WhatsApp</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Instagram</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <hr>
+
+    <hr>
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href=""> Camisa10</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+  <script src="index.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
 
 </body>
 
