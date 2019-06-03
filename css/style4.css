@@ -19,3 +19,16 @@ a:link{
     text-decoration: none;
     color: aquamarine;
   }
+  a:link{
+    text-decoration: none;
+  }
+  a{
+    color: #111;
+  }
+  a:hover{
+    text-decoration: none;
+    color: aquamarine;
+  }
+  .btn-dark{
+    border-radius: 2vh;
+  }

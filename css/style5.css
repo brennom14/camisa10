@@ -1,0 +1,113 @@
+.mrg-2 {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-color: rgb(238, 238, 238);
+    margin-left: 3vw;
+    width: 30vw;
+    height: 40vh;;
+    margin-top: 7%;
+    text-align: center;
+  }
+  
+  .topo-titulo {
+    margin-top: 0;
+    height: 60px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+  }
+  
+  .topo-titulo p {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    border-radius: none;
+    text-align: ce;
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: sans-serif;
+  }
+  
+  .alfafa {
+    width: 98vw;
+  }
+  
+  .container{
+    margin-top: 20vh;
+    width: 190vw;
+    padding-right: 10vw;
+    text-align: right;
+  }
+  
+  .topo-titulo{
+    margin-bottom: 5vh;
+  }
+  h1{
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 5vh;
+  }
+  a:link{
+    text-decoration: none;
+  }
+  a{
+    color: #111;
+  }
+  a:hover{
+    text-decoration: none;
+    color: aquamarine;
+  }
+  .btn-dark{
+    border-radius: 2vh;
+  }
+  .mrg-3 {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-color: rgb(238, 238, 238);
+    margin-right: 30vw;
+    width: 30vw;
+    height: 40vh;;
+    margin-top: -73.5vh;
+    text-align: center;
+  }
+  
+  .topo-titulo-2 {
+    margin-top: 0;
+    height: 60px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+  }
+  
+  .topo-titulo-2 p {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    border-radius: none;
+    text-align: ce;
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: sans-serif;
+  }
+  
+  .alfafa {
+    width: 98vw;
+  }
+  
+  .container{
+    margin-top: 20vh;
+    width: 180vw;
+    padding-right: 10vw;
+    text-align: right;
+  }
+  
+  .topo-titulo-2{
+    margin-bottom: 5vh;
