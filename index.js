@@ -70,12 +70,23 @@ function cadastrarObservador() {
 
 
 function buscaPorNome() {
+  console.log(`Entrou na Função`);
+
   let nomeDesejado = document.getElementById('txtbusca').value
 
-  ref.on('value', async function (snapshot) {
+  bd.ref('/jogadores').on('value', async function (snapshot) {
     snapshot.forEach(jogador => {
       if (jogador.val().name == nomeDesejado) {
         sessionStorage.id = jogador.key
+        window.location.href = "index3.html";
+      }
+    });
+  })
+
+  bd.ref('/observadores').on('value', async function (snapshot) {
+    snapshot.forEach(observador => {
+      if (observador.val().name == nomeDesejado) {
+        sessionStorage.id = observador.key
         window.location.href = "index3.html";
       }
     });
@@ -93,17 +104,17 @@ var refUsuarios = bd.ref('/usuarios')
 function saveUser() {
   // Referenciando a Database e  a pasta onde está sendo adicionado os elementos
   firebase.auth().signInWithEmailAndPassword(document.getElementById('email').value, document.getElementById('senha').value)
-  .then(() => {
-    alert("Logado")
+    .then(() => {
+      alert("Logado")
 
-    firebase.auth().onAuthStateChanged((user) => {
-      sessionStorage.idLogado = user.uid
-      window.location.href = "home.html";
+      firebase.auth().onAuthStateChanged((user) => {
+        sessionStorage.idLogado = user.uid
+        window.location.href = "home.html";
+      })
     })
-  })
-  .catch(() => {
-    alert("Ocorreu um Erro")
-  })
+    .catch(() => {
+      alert("Ocorreu um Erro")
+    })
 }
 
 function funcao(event) {
@@ -118,20 +129,20 @@ document.getElementsByClassName('contact')[0].style.display = "none"
 document.getElementsByClassName('contact')[1].style.display = "none"
 
 document.getElementById('atleta').addEventListener('click', () => {
-  if(document.getElementsByClassName('contact')[0].style.display == "none"){
+  if (document.getElementsByClassName('contact')[0].style.display == "none") {
     document.getElementsByClassName('contact')[0].style.display = "block"
     document.getElementsByClassName('contact')[1].style.display = "none"
-  }else{
+  } else {
     document.getElementsByClassName('contact')[0].style.display = "none"
     document.getElementsByClassName('contact')[1].style.display = "block"
   }
 })
 
 document.getElementById('observador').addEventListener('click', () => {
-  if(document.getElementsByClassName('contact')[1].style.display == "none"){
+  if (document.getElementsByClassName('contact')[1].style.display == "none") {
     document.getElementsByClassName('contact')[1].style.display = "block"
     document.getElementsByClassName('contact')[0].style.display = "none"
-  }else{
+  } else {
     document.getElementsByClassName('contact')[1].style.display = "none"
     document.getElementsByClassName('contact')[0].style.display = "block"
   }

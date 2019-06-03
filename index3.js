@@ -22,7 +22,7 @@ window.onload = carregar()
 
 
 function carregar() {
-  ref.once('value', async function (snapshot) {
+  bd.ref('/jogadores').once('value', async function (snapshot) {
     snapshot.forEach(jogador => {
       if (jogador.key == sessionStorage.id) {
         retornaHtml(
@@ -38,6 +38,27 @@ function carregar() {
           jogador.val().conf2,
           jogador.val().celular,
           jogador.val().telefone
+        )
+      }
+    });
+  })
+
+  bd.ref('/observadores').once('value', async function (snapshot) {
+    snapshot.forEach(observador => {
+      if (jogador.key == sessionStorage.id) {
+        retornaHtml(
+          observador.val().name,
+          observador.val().data,
+          observador.val().cpf,
+          observador.val().sexo,
+          observador.val().altura,
+          observador.val().posição,
+          observador.val().peso,
+          observador.val().email,
+          observador.val().senha,
+          observador.val().conf2,
+          observador.val().celular,
+          observador.val().telefone
         )
       }
     });
