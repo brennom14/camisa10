@@ -160,3 +160,6 @@ a:hover{
   text-decoration: none;
   color: aquamarine;
 }
+.btn-dark{
+  border-radius: 2vh;
+}

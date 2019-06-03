@@ -1,0 +1,186 @@
+.container-2 {
+    max-width: 1200px;
+    margin-left: 0;
+    padding: 1em;
+  }
+  
+  .brand-2 {
+    text-align: center;
+  }
+  
+  .company-info-2 h3, .company-info-2 ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+  
+  .contact-2 form label {
+    display: block;
+  }
+  
+  .contact-2 form .full {
+    grid-column: 1 / 3;
+  }
+  
+  .contact-2 form button {
+    border: 0;
+    text-transform: uppercase;
+  }
+  
+  .contact-2 form button:hover, .contact form button:focus {
+    background: black;
+    color: #fff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+  }
+  
+  .company-info-2 h3, .company-info ul, .brand {
+    text-align: left;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+    font: 200 1em/1.5 'Times', serif;
+    color: black;
+    padding: 1px;
+    margin: 1px;
+    border-radius: 0.40em;
+  }
+  
+  .mrg-2 {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-color: rgb(238, 238, 238);
+    margin-left: 5vw;
+    width: 20vw;
+    margin-top: 7.5%;
+  }
+  
+  .topo-titulo {
+    margin-top: 0;
+    height: 60px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+  }
+  
+  .topo-titulo p {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    border-radius: none;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: sans-serif;
+  }
+  
+  .alfafa {
+    width: 98vw;
+  }
+  
+  .container{
+    margin-top: 20vh;
+    width: 180vw;
+    padding-right: 10vw;
+    text-align: right;
+  }
+  
+  .topo-titulo{
+    margin-bottom: 5vh;
+  }
+  
+  .container label{
+    text-align: left;
+    width: 30%;
+  
+  }
+  
+  .container input{
+    width: 60%;
+    margin-right: 5vh;
+    height: 5vh;
+    /* border: none; */
+    border: solid 1px rgba(90, 90, 90, 0.7);
+    border-radius: 5px;
+  }
+  
+  .contact-2 input{
+    width: 80%;
+    margin-right: 5vh;
+    height: 3vh;
+    /* border: none; */
+    border: solid 1px rgba(90, 90, 90, 0.7);
+    border-radius: 5px;
+  }
+  
+  .contact select{
+    width: 60%;
+    margin-right: 5vh;
+    height: 5.5vh;
+    /* border: none; */
+    border: solid 1px rgba(90, 90, 90, 0.7);
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .contact{
+    
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-color: rgb(238, 238, 238);
+  }
+  
+  .search{
+    width: 150vw;
+    display: flex;
+  }
+  
+  #container-busca{
+    position: fixed;
+    width: 60vw;
+    height: 60vh;
+    background-color: #fff;
+    border: solid 2px rgb(238, 238, 238);
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #container-busca h4{
+    font-size: 1.2em;
+    width: 20vw;
+    margin-bottom: 3vh;
+    text-align: center;
+  }
+  
+  #container-busca input{
+    width: 30vw;
+    margin-bottom: 3vh;
+    height: 5vh;
+    padding-left: 1vw;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: solid 1px rgb(160, 160, 160);
+  }
+  
+  .button-close {
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    right: 0.1vw;
+    top: 0.1vw;
+    background: rgba(0, 41, 58, 0);
+    border-radius: 50%;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+  }

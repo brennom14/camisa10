@@ -94,7 +94,7 @@ async function editar() {
     posição: document.getElementsByTagName('input')[5].value,
     peso: document.getElementsByTagName('input')[6].value,
     email: document.getElementsByTagName('input')[7].value,
-    calular: document.getElementsByTagName('input')[8].value,
+    celular: document.getElementsByTagName('input')[8].value,
     telefone: document.getElementsByTagName('input')[9].value
 
   });
