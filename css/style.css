@@ -7,12 +7,12 @@
     border:0px solid #222;
     border-radius: 1em;
     background:#EEE;
-    width:600px;
+    width:650px;
     height:45px;
     margin:20 px;
     padding:5px 0 5px 5px;
-    float:left; *
-    line-height:36px; // altura da linha
+    float:left;
+    margin-left: 55px;
     }
     #btnBusca {
     background: lightseagreen;
@@ -162,4 +162,6 @@ a:hover{
 }
 .btn-dark{
   border-radius: 2vh;
+    height: 3.8vh;
+    width: 12vh;
 }

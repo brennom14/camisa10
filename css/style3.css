@@ -196,4 +196,31 @@
   }
   .btn-dark{
     border-radius: 2vh;
+    height: 3.9vh;
+    width: 15.5vh;
+  }
+  .text-left{
+    margin-left: -200px;
+  
+  }
+  #retornoTotal input{
+  width: 60%;
+  margin-left:4vh;
+  margin-right: 4vh;
+  height: 4vh;
+  /* border: none; */
+  border: solid 1px rgba(90, 90, 90, 0.7);
+  border-radius: 5px;
+  font-size: 2.2vh;
+  }
+  #retornoTotal h4{
+    margin-left: 4vh;
+  }
+  .text-left{
+    margin-left: 370px;
+  }
+  h1{
+    margin-left: -700px;
+    font-size: 4.7vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }

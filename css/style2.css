@@ -196,4 +196,6 @@ a:hover{
 }
 .btn-dark{
   border-radius: 2vh;
+  height: 3.9vh;
+  width: 18vh;
 }
