@@ -26,6 +26,8 @@ function cadastrarAtleta() {
         name: document.getElementById('name').value,
         data: document.getElementById('data').value,
         cpf: document.getElementById('cpf').value,
+        cidade2: document.getElementById('cidade2').value,
+        estado: document.getElementById('estado').value,
         sexo: document.getElementById('sexo').value,
         altura: document.getElementById('altura').value,
         posição: document.getElementById('posição').value,
@@ -33,7 +35,10 @@ function cadastrarAtleta() {
         email: document.getElementById('email2').value,
         conf2: document.getElementById('conf2').value,
         celular: document.getElementById('cel').value,
-        telefone: document.getElementById('tel').value,
+        name3: document.getElementById('name3').value,
+        cel3: document.getElementById('cel3').value,
+        
+
         tipo: 'atleta'
       });
       alert("Cadastrado")
