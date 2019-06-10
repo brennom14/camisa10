@@ -217,10 +217,13 @@
     margin-left: 4vh;
   }
   .text-left{
-    margin-left: 370px;
+    margin-left: -10px;
   }
   h1{
     margin-left: -700px;
     font-size: 4.7vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .text-btn{
+    margin-left: 350px;
   }

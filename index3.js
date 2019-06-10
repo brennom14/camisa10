@@ -33,11 +33,15 @@ function carregar() {
           jogador.val().altura,
           jogador.val().posição,
           jogador.val().peso,
+          jogador.val().clube,
           jogador.val().email,
           jogador.val().senha,
           jogador.val().conf2,
           jogador.val().celular,
-          jogador.val().telefone
+          jogador.val().tel1,
+          jogador.val().name3,
+          jogador.val().cel3 
+
         )
       }
     });
@@ -66,8 +70,8 @@ function carregar() {
 }
 
 
-function retornaHtml(name, data, cpf, sexo, altura, posição, peso, email, senha, conf2, celular, telefone) {
-  console.log(name, data, cpf, sexo, altura, posição, peso, email, senha, conf2, celular, telefone);
+function retornaHtml(name, data, cpf, sexo, altura, posição, peso, clube, email, senha, conf2, celular, tel1, name3, cel3) {
+  console.log(name, data, cpf, sexo, altura, posição, peso, email, senha, conf2, celular, tel1);
 
   document.getElementsByTagName('input')[0].value = name
   document.getElementsByTagName('input')[1].value = data
@@ -76,9 +80,12 @@ function retornaHtml(name, data, cpf, sexo, altura, posição, peso, email, senh
   document.getElementsByTagName('input')[4].value = altura
   document.getElementsByTagName('input')[5].value = posição
   document.getElementsByTagName('input')[6].value = peso
-  document.getElementsByTagName('input')[7].value = email
-  document.getElementsByTagName('input')[8].value = celular
-  document.getElementsByTagName('input')[9].value = telefone
+  document.getElementsByTagName('input')[7].value = clube
+  document.getElementsByTagName('input')[8].value = email
+  document.getElementsByTagName('input')[9].value = celular
+  document.getElementsByTagName('input')[10].value = tel1
+  document.getElementsByTagName('input')[11].value = name3
+  document.getElementsByTagName('input')[12].value = cel3
 }
 
 
@@ -93,10 +100,12 @@ async function editar() {
     altura: document.getElementsByTagName('input')[4].value,
     posição: document.getElementsByTagName('input')[5].value,
     peso: document.getElementsByTagName('input')[6].value,
-    email: document.getElementsByTagName('input')[7].value,
-    celular: document.getElementsByTagName('input')[8].value,
-    telefone: document.getElementsByTagName('input')[9].value
-
+    clube: document.getElementsByTagName('input')[7].value,
+    email: document.getElementsByTagName('input')[8].value,
+    celular: document.getElementsByTagName('input')[9].value,
+    tel1: document.getElementsByTagName('input')[10].value,
+    name3: document.getElementsByTagName('input')[11].value,
+    cel3: document.getElementsByTagName('input')[12].value
   });
 
   alert("Atualizado")

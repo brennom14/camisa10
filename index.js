@@ -32,9 +32,11 @@ function cadastrarAtleta() {
         altura: document.getElementById('altura').value,
         posição: document.getElementById('posição').value,
         peso: document.getElementById('peso').value,
+        clube: document.getElementById('clube').value,
         email: document.getElementById('email2').value,
         conf2: document.getElementById('conf2').value,
         celular: document.getElementById('cel').value,
+        tel1: document.getElementById('tel1').value,
         name3: document.getElementById('name3').value,
         cel3: document.getElementById('cel3').value,
         
@@ -44,7 +46,7 @@ function cadastrarAtleta() {
       alert("Cadastrado")
     })
 
-
+                                                       
 }
 
 function cadastrarObservador() {
