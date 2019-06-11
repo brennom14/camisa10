@@ -40,7 +40,7 @@ function carregar() {
           jogador.val().celular,
           jogador.val().tel1,
           jogador.val().name3,
-          jogador.val().cel3 
+          jogador.val().cel3
 
         )
       }
@@ -49,7 +49,7 @@ function carregar() {
 
   bd.ref('/observadores').once('value', async function (snapshot) {
     snapshot.forEach(observador => {
-      if (jogador.key == sessionStorage.id) {
+      if (observador.key == sessionStorage.id) {
         retornaHtml(
           observador.val().name,
           observador.val().data,
@@ -112,8 +112,13 @@ async function editar() {
 }
 
 async function excluir() {
-  await bd.ref("/jogadores/" + sessionStorage.id).remove()
-  alert("Excluido")
+  let r = confirm("Deseja realmente excluir sua conta?")
+  if (r == true) {
+    await bd.ref("/jogadores/" + sessionStorage.id).remove()
+
+    alert("Excluido")
+    window.location.href = "index.html";
+  }
 }
 
 console.log(sessionStorage.id);
