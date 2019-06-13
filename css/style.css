@@ -139,7 +139,7 @@ footer{
 }
 .page-footer{
 background: #222;
-padding: 5px;
+padding: 5vh;
 height: 45vh;
 }
 
@@ -148,7 +148,8 @@ height: 45vh;
 }
 
 .footer-copyright{
-  margin-top: -10vh;
+  margin-top: -5vh;
+  color: #EEE;
 }
 a:link{
   text-decoration: none;
@@ -164,4 +165,17 @@ a:hover{
   border-radius: 2vh;
     height: 3.8vh;
     width: 12vh;
+}
+h6 {
+  color: #EEE;
+}
+
+p{
+  color: azure;
+}
+h4{
+  margin-left: 20px;
+}
+.list-unstyled a{
+  color: #EEE;
 }

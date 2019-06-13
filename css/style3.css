@@ -67,7 +67,7 @@
     background-color: rgb(238, 238, 238);
   }
   
-  .topo-titulo p {
+  .topo-titulo h2 {
     margin: 0;
     padding: 0;
     padding-left: 10px;
@@ -76,6 +76,7 @@
     font-weight: bold;
     font-size: 1.25em;
     font-family: sans-serif;
+    color: #111;
   }
   
   .alfafa {
@@ -226,4 +227,7 @@
   }
   .text-btn{
     margin-left: 350px;
+  }
+  h6 {
+    color: #EEE;
   }
