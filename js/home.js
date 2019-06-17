@@ -13,8 +13,7 @@ var bd = firebase.database()
 bd.ref('/jogadores').on('value', async function (snapshot) {
     snapshot.forEach(jogador => {
         if (jogador.key == sessionStorage.idLogado) {
-            document.getElementById('nomeUsuario').innerHTML = jogador.val().name
-            document.getElementById('tipoUsuario').innerHTML = jogador.val().tipo
+            alert(`Bem Vindo ${jogador.val().name}, Nível de acesso: ${jogador.val().tipo}`)
         }
     });
 })
@@ -22,8 +21,7 @@ bd.ref('/jogadores').on('value', async function (snapshot) {
 bd.ref('/observadores').on('value', async function (snapshot) {
     snapshot.forEach(observador => {
         if (observador.key == sessionStorage.idLogado) {
-            document.getElementById('nomeUsuario').innerHTML = observador.val().name
-            document.getElementById('tipoUsuario').innerHTML = observador.val().tipo
+            alert(`Bem Vindo ${observador.val().name}, Nível de acesso: ${observador.val().tipo}`)   
         }
     });
 })
