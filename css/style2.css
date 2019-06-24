@@ -55,7 +55,8 @@
   border-color: rgb(238, 238, 238);
   margin-left: 5vw;
   width: 20vw;
-  margin-top: 30vh;
+  margin-top: 25vh;
+  height: 42vh;
 }
 
 .topo-titulo {
@@ -200,7 +201,7 @@ a:hover{
   width: 28vh;
 }
 .options{
-  margin-top: -70vh;
+  margin-top: -45vh;
   margin-left: 100vh;
   padding-bottom: 70vh;
 }
@@ -208,12 +209,38 @@ a:hover{
   border-radius: 2vh;
   height: 5vh;
   width: 28vh;
-  margin-top: -45px;
+  margin-top: -50px;
   background-color: #111;
   color: white;
   margin-left: 1vh;
+  border-color: black;
 }
 .topo2{
   background-size: contain;
-  background-image: url(https://cdn.shortpixel.ai/client/q_lossless,ret_img,w_640,h_300/https://www.sportlink.com.br/wp-content/uploads/2018/11/Grama-Sint%C3%A9tica-para-campo-de-futebol-640x300.jpg);
+  background-image: url('http://www.stadiumgrass.com.br/images/estadiodefutebol.jpg');
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-attachment: fixed;
+  max-width: 450vh;
+}
+h2{
+  color: #fff;
+}
+.btn-login{
+  border-radius: 0.9vh;
+  height: 5vh;
+  width: 20vh;
+  background-color: rgb(255, 145, 0);
+  color: white;
+  margin-left: 15vh;
+  border-color: #fff;
+}
+.acesso{
+  color:black;
+  font-size: 1.8vh;
+  margin-top: -40vh;
+  margin-left: 15px;
+}
+.topo2int{
+  margin-left: 9.4vh;
 }

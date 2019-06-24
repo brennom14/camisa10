@@ -69,9 +69,6 @@
 		margin-left: 20px;
 	}
 
-.vertical-menu {
-	width: 200px; /* Set a width if you like */
-}
 
 
 *, *:before, *:after{
@@ -87,7 +84,7 @@ h1{
 	font-size: 3em;
 	font-weight: 900;
 	padding: 0 0 20px 0;
-	text-align: center;
+  text-align: center;
 }
 h2{
 	color: #111;
@@ -141,7 +138,7 @@ footer{
 .page-footer{
 background: #222;
 padding: 5vh;
-height: 45vh;
+height: 35vh;
 }
 
 .row{
@@ -176,13 +173,14 @@ p{
 }
 h4{
   margin-left: 20px;
+  font-weight: bold;
 }
 .list-unstyled a{
   color: #EEE;
 }
 .menu {
 	display: block;
-	height: 40px;
+	height: 42px;
 	background-color: black;
 }
 
@@ -219,9 +217,6 @@ h4{
 	display: block;
 }
 
-.menuint li:hover {
-	background-color: blue;
-}
 .Copyright{
 font-size: 3.1vh;
 color:black;
