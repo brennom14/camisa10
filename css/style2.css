@@ -55,7 +55,7 @@
   border-color: rgb(238, 238, 238);
   margin-left: 5vw;
   width: 20vw;
-  margin-top: 7.5%;
+  margin-top: 30vh;
 }
 
 .topo-titulo {
@@ -97,7 +97,7 @@
   text-align: left;
   width: 30%;
 
-}
+} 
 
 .container input{
   width: 60%;
@@ -192,10 +192,28 @@ a{
 }
 a:hover{
   text-decoration: none;
-  color: aquamarine;
+  color: rgb(33, 97, 216);
 }
 .btn-dark{
+  border-radius: 2vh; 
+  height: 5vh;
+  width: 28vh;
+}
+.options{
+  margin-top: -70vh;
+  margin-left: 100vh;
+  padding-bottom: 70vh;
+}
+.btn-dark-2{
   border-radius: 2vh;
   height: 5vh;
   width: 28vh;
+  margin-top: -45px;
+  background-color: #111;
+  color: white;
+  margin-left: 1vh;
+}
+.topo2{
+  background-size: contain;
+  background-image: url(https://cdn.shortpixel.ai/client/q_lossless,ret_img,w_640,h_300/https://www.sportlink.com.br/wp-content/uploads/2018/11/Grama-Sint%C3%A9tica-para-campo-de-futebol-640x300.jpg);
 }

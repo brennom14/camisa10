@@ -13,43 +13,15 @@ function carregar() {
     bd.ref('/jogadores').once('value', function (snapshot) {
         snapshot.forEach(jogador => {
             console.log(`Entrou aqui`);
-            
+
             document.getElementById("retorno").innerHTML = document.getElementById("retorno").innerHTML + `
-            <div>
-            <h5>Nome Completo:</h5>
-              <input value="${jogador.val().name}"></input>
-              <br><br>
-              <h5>Data de Nascimento:</h5>
-              <input value="${jogador.val().data}"></input>
-              <br><br>
-              <h5>Sexo:</h5>
-              <input value="${jogador.val().sexo}"></input>
-              <br><br>
-              <h5>Altura:</h5>
-              <input value="${jogador.val().altura}"></input>
-              <br><br>
-              <h5>Posição:</h5>
-              <input value="${jogador.val().posição}"></input>
-              <br><br>
-              <h5>Peso:</h5>
-              <input value="${jogador.val().peso}"></input>
-              <br><br>
-              <h5>Último clube associado?</h5>
-              <input value="${jogador.val().clube}"></input>
-              <br><br>
-              <h5>Email:</h5>
-              <input value="${jogador.val().email}"></input>
-              <br><br>
-              <h5>Celular:</h5>
-              <input value="${jogador.val().celular}"></input>
-              <br><br>
-              <h5>Nome do Responsável</h5>
-              <input value="${jogador.val().name3}"></input>
-              <br><br>
-              <h5>Celular do Responsável</h5>
-              <input value="${jogador.val().cel3}"></input>
-              <br><br>
-              <p></p>
+            <div class="card" style="width: 40%;margin-bottom: 20px; display:flex; justify-content:center;">
+            <div class="card-body-atleta">
+             <h8>Nome: ${jogador.val().name}</h8>
+             <h8>Data: ${jogador.val().data}</h8>
+             <h8>Sexo: ${jogador.val().sexo}</h8>
+             <h8>Posição: ${jogador.val().posição}</h8>
+            </div>
             </div>
             `
         }

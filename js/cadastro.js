@@ -85,7 +85,7 @@ function buscaPorNome() {
     snapshot.forEach(jogador => {
       if (jogador.val().name == nomeDesejado) {
         sessionStorage.id = jogador.key
-        window.location.href = "busca.html";
+        window.location.href = "perfil.html";
       }
     });
   })
