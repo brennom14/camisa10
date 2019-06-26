@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <br>
+  <br>
   <header>
     <div class="menu">
       <div class="menuint">
@@ -64,7 +64,8 @@
     <div class="topo-titulo">
       <h4>Já sou cliente Camisa10</h4>
     </div>
-    <text class="acesso">Para acessar sua conta, preencha os campos abaixo:</text>
+    <text class="acesso">Para acessar sua conta, preencha os </text>
+    <text class="acesso">campos abaixo:</text>
     <div class="container-2">
       <div class="wrapper-2">
         <div class="company-info-2">
@@ -87,184 +88,181 @@
   <div class="options">
     <button id="atleta" class="btn btn-dark">Cadastrar Atleta</button>
     <button id="observador" class="btn btn-dark">Cadastrar Observador</button>
-  </div>
-  </div>
+    <div class="container">
+      <div class="contact">
+        <div class="topo-titulo-2">
+          <cad class="cad">Cadastro de Atleta</cad>
+        </div>
+        <div class="atleta">
+          <p>
+            <!--Dados do formulário-->
+            <label>Nome Completo:</label><input type="text" name="name" id="name">
+          </p>
+          <p>
+            <label>Data de Nascimento:</label>
+            <input type="date" name="data" id="data">
+          </p>
+          <p>
+            <label>CPF:</label>
+            <input type="text" name="cpf" id="cpf">
+          </p>
+          <p>
+            <label>Cidade:</label>
+            <input type="text" name="cidade2" id="cidade2">
+          </p>
+          <p>
+            <label>Estado</label>
+            <select id="estado" name="estado">
+              <option value="">Escolha um estado</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+              <option value="ES">Estrangeiro</option>
+            </select>
+          </p>
+          <p>
+            <label>Sexo:</label>
+            <!-- <input type="text" name="sexo" id="sexo"> -->
+            <select name="" id="sexo">
+              <option value="null">Escolha um Sexo</option>
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+            </select>
+          </p>
+          <p>
+            <label>Altura (cm):</label>
+            <input type="text" name="sexo" id="altura">
+            <p>
+              <label>Posição:</label>
+              <input type="text" name="posição" id="posição">
+            </p>
+            <p>
+              <label>Peso</label>
+              <input type="text" name="peso" id="peso">
+            </p>
+            <p>
+              <label>Último clube associado?</label>
+              <input type="text" name="clube" id="clube">
+            </p>
+            <p>
+              <label>E-mail:</label>
+              <input type="email" name="email" id="email2">
+            </p>
+            <p>
+              <label>Senha:</label>
+              <input type="password" name="senha" id="senha2">
+            </p>
+            <p>
+              <label>Confirmação de senha:</label>
+              <input type="password" name="conf2" id="conf2">
+            </p>
+            <p>
+              <label>Celular para contato:</label>
+              <input type="text" name="cel" id="cel">
+            </p>
+            <p class="full">
+              <label>Telefone:</label>
+              <input type="text" name="tel1" id="tel1">
+            </p>
+            <p>
+              <label>Nome Completo do Responsável:</label><input type="text" name="name3" id="name3">
+            </p>
+            <p>
+              <label>Telefone do Responsável:</label><input type="text" name="cel3" id="cel3">
+            </p>
+            <!--Botão onde fará o cadastro-->
+            <button onclick="cadastrarAtleta()" class="btn-cadastro">Cadastrar</button>
+          </p>
+        </div>
 
-
-  <!--Formulário-->
-  <div class="container">
-    <div class="contact">
-      <div class="topo-titulo">
-        <h2>CADASTRO DE ATLETAS</h2>
+        <div class="contact">
+          <div class="topo-titulo">
+            <h2>CADASTRO DE OBSERVADOR</h2>
+          </div>
+          <p>
+            <!--Dados do formulário-->
+            <label>Nome Completo:</label><input type="text" name="name" id="name2">
+          </p>
+          <p>
+            <label>Data de Nascimento:</label>
+            <input type="date" name="data" id="data2">
+          </p>
+          <p>
+            <label>CPF:</label>
+            <input type="text" name="cpf" id="cpf2">
+          </p>
+          <p>
+            <label>Sexo:</label>
+            <!-- <input type="text" name="sexo" id="sexo"> -->
+            <select name="" id="sexo2">
+              <option value="null">Escolha um Sexo</option>
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+            </select>
+          </p>
+          <p>
+            <label>Celular para contato:</label>
+            <input type="text" name="cel" id="cel2">
+          </p>
+          <p class="full">
+            <label>Telefone:</label>
+            <input type="text" name="tel" id="tel2">
+          </p>
+          <p>
+            <label for="">Cidade:</label>
+            <input id="cidade" type="text">
+          </p>
+          <p>
+            <label>Observador Desde?</label>
+            <input type="date" name="data" id="desde">
+          </p>
+          <p>
+            <label for="">Anexo para Identificação</label>
+            <input type="file" name="" id="foto">
+          </p>
+          <!-- Associados -->
+          <p>
+            <label>E-mail:</label>
+            <input type="email" name="email" id="email3">
+          </p>
+          <p>
+            <label>Senha:</label>
+            <input type="password" name="senha" id="senha3">
+          </p>
+          <p>
+            <label>Confirmação de senha:</label>
+            <input type="password" name="conf2" id="conf3">
+          </p>
+          <!--Botão onde fará o cadastro-->
+          <button onclick="cadastrarObservador()" class="btn-cadastro">Cadastrar</button>
+          </p>
+        </div>
       </div>
-      <p>
-        <!--Dados do formulário-->
-        <label>Nome Completo:</label><input type="text" name="name" id="name">
-      </p>
-      <p>
-        <label>Data de Nascimento:</label>
-        <input type="date" name="data" id="data">
-      </p>
-      <p>
-        <label>CPF:</label>
-        <input type="text" name="cpf" id="cpf">
-      </p>
-      <p>
-        <label>Cidade:</label>
-        <input type="text" name="cidade2" id="cidade2">
-      </p>
-      <p>
-        <label>Estado</label>
-        <select id="estado" name="estado">
-          <option value="">Escolha um estado</option>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-          <option value="ES">Estrangeiro</option>
-        </select>
-      </p>
-      <p>
-        <label>Sexo:</label>
-        <!-- <input type="text" name="sexo" id="sexo"> -->
-        <select name="" id="sexo">
-          <option value="null">Escolha um Sexo</option>
-          <option value="feminino">Feminino</option>
-          <option value="masculino">Masculino</option>
-        </select>
-      </p>
-      <p>
-        <label>Altura (cm):</label>
-        <input type="text" name="sexo" id="altura">
-        <p>
-          <label>Posição:</label>
-          <input type="text" name="posição" id="posição">
-        </p>
-        <p>
-          <label>Peso</label>
-          <input type="text" name="peso" id="peso">
-        </p>
-        <p>
-          <label>Último clube associado?</label>
-          <input type="text" name="clube" id="clube">
-        </p>
-        <p>
-          <label>E-mail:</label>
-          <input type="email" name="email" id="email2">
-        </p>
-        <p>
-          <label>Senha:</label>
-          <input type="password" name="senha" id="senha2">
-        </p>
-        <p>
-          <label>Confirmação de senha:</label>
-          <input type="password" name="conf2" id="conf2">
-        </p>
-        <p>
-          <label>Celular para contato:</label>
-          <input type="text" name="cel" id="cel">
-        </p>
-        <p class="full">
-          <label>Telefone:</label>
-          <input type="text" name="tel1" id="tel1">
-        </p>
-        <p>
-          <label>Nome Completo do Responsável:</label><input type="text" name="name3" id="name3">
-        </p>
-        <p>
-          <label>Telefone do Responsável:</label><input type="text" name="cel3" id="cel3">
-        </p>
-        <!--Botão onde fará o cadastro-->
-        <button onclick="cadastrarAtleta()" class="btn btn-dark">Cadastrar</button>
-      </p>
     </div>
-
-    <div class="contact">
-      <div class="topo-titulo">
-        <h2>CADASTRO DE OBSERVADOR</h2>
-      </div>
-      <p>
-        <!--Dados do formulário-->
-        <label>Nome Completo:</label><input type="text" name="name" id="name2">
-      </p>
-      <p>
-        <label>Data de Nascimento:</label>
-        <input type="date" name="data" id="data2">
-      </p>
-      <p>
-        <label>CPF:</label>
-        <input type="text" name="cpf" id="cpf2">
-      </p>
-      <p>
-        <label>Sexo:</label>
-        <!-- <input type="text" name="sexo" id="sexo"> -->
-        <select name="" id="sexo2">
-          <option value="null">Escolha um Sexo</option>
-          <option value="feminino">Feminino</option>
-          <option value="masculino">Masculino</option>
-        </select>
-      </p>
-      <p>
-        <label>Celular para contato:</label>
-        <input type="text" name="cel" id="cel2">
-      </p>
-      <p class="full">
-        <label>Telefone:</label>
-        <input type="text" name="tel" id="tel2">
-      </p>
-      <p>
-        <label for="">Cidade:</label>
-        <input id="cidade" type="text">
-      </p>
-      <p>
-        <label>Observador Desde?</label>
-        <input type="date" name="data" id="desde">
-      </p>
-      <p>
-        <label for="">Anexo para Identificação</label>
-        <input type="file" name="" id="foto">
-      </p>
-      <!-- Associados -->
-      <p>
-        <label>E-mail:</label>
-        <input type="email" name="email" id="email3">
-      </p>
-      <p>
-        <label>Senha:</label>
-        <input type="password" name="senha" id="senha3">
-      </p>
-      <p>
-        <label>Confirmação de senha:</label>
-        <input type="password" name="conf2" id="conf3">
-      </p>
-      <!--Botão onde fará o cadastro-->
-      <button onclick="cadastrarObservador()" class="btn btn-dark">Cadastrar</button>
-      </p>
-    </div>
-  </div>
 
   </div>
   </div>
@@ -272,6 +270,12 @@
   </div>
   <!--Rodapé-->
   </div>
+  </div>
+  </div>
+
+
+  <!--Formulário-->
+
   <!-- /#wrapper -->
   <!-- Footer -->
   <footer class="page-footer font-small stylish-color-dark pt-4">
@@ -373,7 +377,7 @@
     <h4 class="Copyright">© 2019 Copyright Camisa10</h4>
 
     <!-- Copyright -->
-   
+
     <!-- Copyright -->
 
   </footer>

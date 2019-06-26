@@ -11,7 +11,7 @@ var config = {
 firebase.initializeApp(config);
 var bd = firebase.database()
 
-var ref = bd.ref('/jogadores')
+//var ref = bd.ref('/jogadores')
 // Reference messages collection
 
 
@@ -69,6 +69,7 @@ function cadastrarObservador() {
         tipo: 'observador'
       });
       alert("Cadastrado")
+      window.location.href = "homes.html";
     })
 
 
@@ -80,8 +81,12 @@ function buscaPorNome() {
   console.log(`Entrou na Função`);
 
   let nomeDesejado = document.getElementById('txtbusca').value
+  console.log(nomeDesejado);
+  
 
   bd.ref('/jogadores').on('value', async function (snapshot) {
+    console.log("Entrou aqui");
+    
     snapshot.forEach(jogador => {
       if (jogador.val().name == nomeDesejado) {
         sessionStorage.id = jogador.key
@@ -91,6 +96,7 @@ function buscaPorNome() {
   })
 
   bd.ref('/observadores').on('value', async function (snapshot) {
+    console.log("Entrou aqui");
     snapshot.forEach(observador => {
       if (observador.val().name == nomeDesejado) {
         sessionStorage.id = observador.key
@@ -98,6 +104,7 @@ function buscaPorNome() {
       }
     });
   })
+  console.log(`Saiu na Função`);
 }
 
 
