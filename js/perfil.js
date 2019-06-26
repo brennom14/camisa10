@@ -40,7 +40,7 @@ function carregar() {
           jogador.val().celular,
           jogador.val().tel1,
           jogador.val().name3,
-          jogador.val().cel3
+          jogador.val().cel3s
 
         )
       }

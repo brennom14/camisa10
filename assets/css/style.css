@@ -80,6 +80,7 @@ body {
 
 .topo2 {
 	height: 96px;
+	color: black;
 }
 
 .topo2int {
@@ -88,6 +89,7 @@ body {
 	height: 96px;
 	margin: auto;
 	font-size: 4vh;
+	color: black;
 }
 
 .logo {
@@ -114,8 +116,9 @@ body {
 }
 
 .menu {
+	margin-top: 50vh;
 	display: block;
-	height: 40px;
+	height: 45px;
 	background-color: black;
 }
 
@@ -125,6 +128,7 @@ body {
 	max-width: 1040px;
 	height: 40px;
 	margin: auto;
+	margin-top: -50vh;
 }
 
 .menu ul {
@@ -274,7 +278,7 @@ body {
 }
 
 .slideshow_area {
-	width: 3012px;
+	width: 3048px;
 	/* 5 vezes a largura do slide*/
 	height: 335px;
 	transition: all 1s linear;
@@ -562,5 +566,5 @@ body {
 }
 
 .optionslogin {
-	margin-left: 70vw;
+	margin-left: 65vw;
 }

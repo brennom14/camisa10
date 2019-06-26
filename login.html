@@ -23,42 +23,39 @@
 <body>
   <br>
   <header>
-    <div class="menu">
-      <div class="menuint">
-      </div>
-      <div class="topo2">
-        <div class="topo2int">
-          <br><br>
-          <h2>Camisa10</h2>
-          <div id='busca'>
-            <div class="search">
-              <input id="txtbusca" name="q" type="text" value="" placeholder="Digite o que você procura...">
-              </input><br><button onclick="buscaPorNome()" class="btn-dark-2">Pesquisar</button><br><br>
+        <div class="topo2">
+          <div class="topo2int">
+            <br><br>
+            <h2>Camisa10</h2>
+            
+          <div class="menu">
+            <div class="menuint">
+  
+              <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                  <a href="atletas.html">Atletas</a>
+                </li>
+                <li>
+                  <a href="">Autores</a>
+                </li>
+                <li><a href="">Sobre</a></li>
+                <li>
+                  <a href="">Noticias</a>
+                </li>
+                <li><a href="">Contatos</a></li>
+                <div id='busca'>
+                    <div class="search">
+                      <input id="txtbusca" name="q" type="text" value="" placeholder="Digite o que você procura...">
+                      </input><br><button onclick="buscaPorNome()" class="btn-dark-2"></button><br><br>
+                    </div>
+                  </div>
+                </div>
+  
+              </ul>
             </div>
           </div>
-        </div>
-        <div class="menu">
-          <div class="menuint">
-
-            <ul id="menu">
-              <li><a href="">Home</a></li>
-              <li>
-                <a href="atletas.html">Atletas</a>
-              </li>
-              <li>
-                <a href="">Autores</a>
-              </li>
-              <li><a href="">Sobre</a></li>
-              <li>
-                <a href="">Noticias</a>
-              </li>
-              <li><a href="">Contatos</a></li>
-
-            </ul>
-          </div>
-        </div>
-  </header>
-  <br>
+    </header>
   <!--Formulário-->
   <div class="mrg-2">
     <div class="topo-titulo">
@@ -94,6 +91,7 @@
           <cad class="cad">Cadastro de Atleta</cad>
         </div>
         <div class="atleta">
+          <p></p>
           <p>
             <!--Dados do formulário-->
             <label>Nome Completo:</label><input type="text" name="name" id="name">
@@ -204,6 +202,7 @@
         <div class="topo-titulo-2">
           <cad class="cad">Cadastro de Observador</cad>
         </div>
+        <p></p>
         <div class="atleta">
           <p>
             <!--Dados do formulário-->

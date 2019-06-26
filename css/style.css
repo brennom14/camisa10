@@ -1,136 +1,139 @@
 /*Barra de pesquisa*/
 #busca {
-  margin-left: 2em;
-  padding:0;
-  }
-  #txtbusca {
-  border:0px solid #222;
-  border-radius: 1em;
-  background:#EEE;
-  width:650px;
-  height:45px;
-  margin:20 px;
-  padding:5px 0 5px 5px;
-  float:left;
-  margin-left: 120px;
-  margin-top:-50px;
-  }
-  #btnBusca {
-  background: lightseagreen;
-  position:relative;
-  border:0px solid #222;
-  color:black;
-  padding:10px;
-  border-radius: 1em;
-  font-size:11px;
-  font-weight:bold;
-  text-transform:uppercase;
-  }
+    margin-left: 2em;
+    padding:0;
+    }
+    #txtbusca {
+      border:0px solid #222;
+      border-radius: 1em;
+      background:#EEE;
+      width:380px;
+      height:30px;
+      margin:20 px;
+      padding:5px 0 5px 5px;
+      float:left;
+      margin-left: 70vh;
+      margin-top:-43px;
+      }
+    #btnBusca {
+    background: lightseagreen;
+    position:relative;
+    border:0px solid #222;
+    color:black;
+    padding:10px;
+    border-radius: 1em;
+    font-size:11px;
+    font-weight:bold;
+    text-transform:uppercase;
+    }
 /*Campo do Formulário e botões de pesquisa*/
-.brand{
-text-align: center;
-}
+  .brand{
+	text-align: center;
+  }
+  
+  
+  .company-info h3, .company-info ul{
+	text-align: center;
+	margin:0 0 1rem 0;
+  }
+  
+ 
+  .contact form label{
+	display:block;
+  }
+  
+  .contact form p{
+	margin:0;
+  }
+  
+  .contact form .full{
+	grid-column: 1 / 3;
+  }
+  
+ 
+  .contact form button{
+	border:0;
+	text-transform: uppercase;
+  }
+  
+  .contact form button:hover,.contact form button:focus{
+	background:black;
+	color:#fff;
+	outline:0;
+	transition: background-color 2s ease-out;
+  } 
 
-
-.company-info h3, .company-info ul{
-text-align: center;
-margin:0 0 1rem 0;
-}
-
-
-.contact form label{
-display:block;
-}
-
-.contact form p{
-margin:0;
-}
-
-.contact form .full{
-grid-column: 1 / 3;
-}
-
-
-.contact form button{
-border:0;
-text-transform: uppercase;
-}
-
-.contact form button:hover,.contact form button:focus{
-background:black;
-color:#fff;
-outline:0;
-transition: background-color 2s ease-out;
-} 
-
-
-.company-info h3, .company-info ul, .brand{
-  text-align: left;
-  margin-left: 20px;
-}
+  
+	.company-info h3, .company-info ul, .brand{
+		text-align: left;
+		margin-left: 20px;
+	}
 
 
 
 *, *:before, *:after{
-box-sizing: border-box;
-font: 300 1em/1.5 'Times', serif; color: black;
-  padding: 0; margin: 0;
-  border-radius: 0.40em;
+	box-sizing: border-box;
+	font: 300 1em/1.5 'Times', serif; color: black;
+    padding: 0; margin: 0;
+    border-radius: 0.40em;
 }
 
 html, body{background: rgb(255, 255, 255);}
 h1{
-color: #111;
-font-size: 3em;
-font-weight: 900;
-padding: 0 0 20px 0;
-text-align: center;
+	color: #111;
+	font-size: 3em;
+	font-weight: 900;
+	padding: 0 0 20px 0;
+  text-align: center;
 }
 h2{
-color: #111;
-font-size: 2em;
-font-weight: 900;
-margin-top: 5px;
+	color: #111;
+	font-size: 2em;
+	font-weight: 900;
+  margin-top: 5px;
 }
 p{
-font-size: 1.25em;
-padding: 0 0 40px 0;
+	font-size: 1.25em;
+	padding: 0 0 40px 0;
 }
 h3{
-color: #eee
+	color: #eee
+}
+label{
+    text-align: center;
 }
 *, *:before, *:after{
-box-sizing: border-box;
-font: 300 1em/1.5 'Times', serif; color: black;
-  padding: 20px; margin: 0;
-  border-radius: 0.50em;
+	box-sizing: border-box;
+	font: 300 1em/1.5 'Times', serif; color: black;
+    padding: 20px; margin: 0;
+    border-radius: 0.50em;
 }
-.brand{
-text-align: center;
-}
-
-.contact form p{
-margin:0;
-}
-
-.contact form .full{
-grid-column: 1 / 3;
-}
-
-
-.contact form button{
-border:0;
-text-transform: uppercase;
-}
-
-.contact form button:hover,.contact form button:focus{
-background:black;
-color:#fff;
-outline:0;
-transition: background-color 2s ease-out;
-} 
+  .brand{
+	text-align: center;
+  }
+  
+  .contact form p{
+	margin:0;
+  }
+  
+  .contact form .full{
+	grid-column: 1 / 3;
+  }
+  
+ 
+  .contact form button{
+	border:0;
+	text-transform: uppercase;
+  }
+  
+  .contact form button:hover,.contact form button:focus{
+	background:black;
+	color:#fff;
+	outline:0;
+	transition: background-color 2s ease-out;
+  } 
 footer{
-background-color: #111;
+	background-color: #111;
 }
 .page-footer{
 background: #222;
@@ -139,93 +142,98 @@ height: 35vh;
 }
 
 .row{
-margin-top: -22.5vh;
+  margin-top: -22.5vh;
 }
 
 .footer-copyright{
-margin-top: -5vh;
-color: #EEE;
+  margin-top: -5vh;
+  color: #EEE;
 }
 a:link{
-text-decoration: none;
+  text-decoration: none;
 }
 a{
-color: #111;
+  color: #111;
 }
 a:hover{
-text-decoration: none;
-color: aquamarine;
+  text-decoration: none;
+  color: aquamarine;
 }
 .btn-dark{
-border-radius: 2vh;
-  height: 3.8vh;
-  width: 12vh;
+  border-radius: 2vh;
+    height: 3.8vh;
+    width: 12vh;
 }
 h6 {
-color: #EEE;
+  color: #EEE;
 }
 
 p{
-color: azure;
+  color: azure;
 }
 h4{
-margin-left: 17px;
-font-weight: bold;
-margin-top:4px;
+  margin-left: 20px;
+  font-weight: bold;
 }
 .list-unstyled a{
-color: #EEE;
+  color: #EEE;
 }
-.menu {
-display: block;
-height: 42px;
-background-color: black;
-}
-
-.menuint {
-display: block;
-width: 100%;
-max-width: 1040px;
-height: 40px;
-margin: auto;
-
-}
-
-.menu ul {
-display: block;
-margin: 0;
-padding: 0;
-list-style: none;
-}
-
-
-.menu li {
-float: left;
-line-height: 40px;
-padding-left: 10px;
-padding-right: 10px;
-}
-
-.menu a {
-color: white;
-text-decoration: none;
-}
-
-.menu li:hover .submenu {
-display: block;
-}
-
 .Copyright{
 font-size: 3.1vh;
 color:black;
 text-align: center;
 }
-.btn-cadastro{
-border-radius: 0.9vh;
-height: 5vh;
-width: 28vh;
-background-color:#fa5400;
-color: white;
-margin-left: 4.8vh;
-border-color: #fff;
+.btn-dark-2{
+  border-radius: 1rem;
+  height: 5.2vh;
+  width: 7vh;
+  margin-top: -43px;
+  background-color:rgb(124, 122, 122);
+  color: white;
+  margin-left: -6.87vh;
+  border-color: black;
+
+} 
+.menu {
+  display: block;
+  height: 45px;
+  background-color: black;
+  width: 300vh;
+  margin-top: -22vh;
+  margin-left: -30vh;
+}
+
+.menuint {
+  display: block;
+  width: 100%;
+  max-width: 1040px;
+  height: 40px;
+  margin: auto;
+}
+
+.menu ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  float: left;
+  line-height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+.menuint li:hover {
+  background-color: blue;
 }
