@@ -39,14 +39,14 @@ function cadastrarAtleta() {
         tel1: document.getElementById('tel1').value,
         name3: document.getElementById('name3').value,
         cel3: document.getElementById('cel3').value,
-        
+
 
         tipo: 'atleta'
       });
       alert("Cadastrado")
     })
 
-                                                       
+
 }
 
 function cadastrarObservador() {
@@ -82,11 +82,11 @@ function buscaPorNome() {
 
   let nomeDesejado = document.getElementById('txtbusca').value
   console.log(nomeDesejado);
-  
+
 
   bd.ref('/jogadores').on('value', async function (snapshot) {
     console.log("Entrou aqui");
-    
+
     snapshot.forEach(jogador => {
       if (jogador.val().name == nomeDesejado) {
         sessionStorage.id = jogador.key
@@ -117,18 +117,18 @@ var refUsuarios = bd.ref('/usuarios')
 // Save message to firebase
 function saveUser() {
   // Referenciando a Database e  a pasta onde está sendo adicionado os elementos
-  window.location.href = "index.html";
-  // firebase.auth().signInWithEmailAndPassword(document.getElementById('email').value, document.getElementById('senha').value)
-  //   .then(() => {
-  //     alert("Logado")
+  firebase.auth().signInWithEmailAndPassword(document.getElementById('email').value, document.getElementById('senha').value)
+    .then(() => {
+      alert("Logado")
 
-  //     firebase.auth().onAuthStateChanged((user) => {
-  //       sessionStorage.idLogado = user.uid
-  //     })
-  //   })
-  //   .catch(() => {
-  //     alert("Ocorreu um Erro")
-  //   })
+      firebase.auth().onAuthStateChanged((user) => {
+        sessionStorage.idLogado = user.uid
+        window.location.href = "index.html";
+      })
+    })
+    .catch(() => {
+      alert("Ocorreu um Erro")
+    })
 }
 
 function funcao(event) {
@@ -161,5 +161,3 @@ document.getElementById('observador').addEventListener('click', () => {
     document.getElementsByClassName('contact')[0].style.display = "block"
   }
 })
-
-console.log(document.getElementsByClassName('contact')[1]);

@@ -54,15 +54,17 @@
                 <a href="">Noticias</a>
               </li>
               <li><a href="">Contatos</a></li>
-
+              <div class="optionslogin">
+                <li id="login"><a>Login</a></li>
+              </div>
             </ul>
           </div>
         </div>
   </header>
-      <div id="retorno">
-        <h1>Atletas</h1>
-        </div>
-        <!--Rodapé-->
+  <div id="retorno">
+    <h1>Atletas</h1>
+  </div>
+  <!--Rodapé-->
   </div>
   <!-- /#wrapper -->
   <!-- Footer -->
@@ -188,6 +190,10 @@
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+
+    document.getElementById('login').addEventListener('click', () => {
+      window.location.href = "login.html";
+    })
   </script>
 
 </body>

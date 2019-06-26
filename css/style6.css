@@ -35,3 +35,11 @@ h8{
     font-size: 10vh;
     margin-left: none;
 }
+
+.optionslogin {
+    margin-left: 70vw;
+}
+
+#login{
+    color: white;
+}
