@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+	<title>Portal </title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+</head>
+<body>
+
+<div class="menu">
+	<div class="menuint">
+		<img src="assets/images/menu.png" border="0" width="40" height="40" class="menumobile" onclick="toggleMenu()">
+		</div>
+
+	<div class="topo2">
+		<div class="topo2int">
+			<h2>Camisa10</h2>
+</div>
+	<div class="menu">
+		<div class="menuint">
+			<img src="assets/images/menu.png" border="0" width="40" height="40" class="menumobile" onclick="toggleMenu()">
+
+			<ul id="menu">
+				<li><a href="">Home</a></li>
+				<li>
+					<a href="">Atletas</a>
+				</li>
+				<li>
+					<a href="">Autores</a>
+				</li>
+				<li><a href="">Sobre</a></li>
+				<li>
+					<a href="">Noticias</a>
+				</li>
+				<li><a href="">Contatos</a></li>
+				<div class="optionslogin">
+					<li id="login"><a>Login</a></li>
+				</div>
+
+			</ul>
+
+		</div>
+	</div>
+	<div class="ultimasnoticias">
+		<div class="ultimasnoticiasint">
+			<div class="ultnoticiasarea">
+				<div class="ultnoticiastitulo">ULTIMAS NOTICIAS</div>
+				<div class="ultnoticiasnoticia">Últimas notícias no mundo do futebol!</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="containerint">
+			<div class="leftside">
+				<div class="slideshow" id="slideshow">
+					<div class="slide_bolinhas">
+						<div class="bolinha" onclick="mudarSlide(0)"></div>
+						<div class="bolinha" onclick="mudarSlide(1)"></div>
+						<div class="bolinha" onclick="mudarSlide(2)"></div>
+						<div class="bolinha" onclick="mudarSlide(3)"></div>
+					</div>
+
+					<div class="slideshow_area">
+						<div class="slide" style="background-image: url('assets/images/noticia.jpg');">
+							<div class="slide_info">
+								<div class="slide_info_titulo">Seleção sub-23</div>
+								<div class="slide_info_subtitulo">A seleção brasileira sub-23 conquistou sábado, 14, o Torneio Maurice Revello 2019 (antigo Toulon), na França, após superar o Japão.</div>
+							</div>
+						</div>
+						<div class="slide" style="background-image: url('assets/images/noticia1.jpg');">
+							<div class="slide_info">
+								<div class="slide_info_titulo">Futebol feminino</div>
+								<div class="slide_info_subtitulo">Começa a Copa do Mundo feminina, a primeira em TV aberta.</div>
+							</div>
+						</div>
+						<div class="slide" style="background-image: url('assets/images/noticia2.jpg');">
+							<div class="slide_info">
+								<div class="slide_info_titulo">Brasileirão</div>
+								<div class="slide_info_subtitulo">Campeonato Brasileiro: Palmeiras passa fácil pelo lanterna Avaí</div>
+							</div>
+						</div>
+						<div class="slide" style="background-image: url('assets/images/noticia3.jpg');">
+							<div class="slide_info">
+								<div class="slide_info_titulo">Copa América 2019</div>
+								<div class="slide_info_subtitulo">Copa América: Uruguai vence Equador por 4 a 0 em jogo com ofensas a Arrascaeta no Mineirão</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="widget">
+					<div class="widget_titulo">NOTICIAS</div>
+					<div class="widget_conteudo">
+
+						<div class="noticiaarea1"">
+							<div class="noticiaitem noticiabig">
+								<div class="noticiaimg">
+									<img src="assets/images/noticiabig.jpg" border="0" width="80" height="80">
+								</div>
+								<div class="noticiatitulo">NBA</div>
+								<div class="noticiainfo">O desfile pelas ruas de Toronto, no Canadá, em comemoração à conquista do título da temporada da NBA pelo Toronto Raptors, passa por momentos de tensão após um tiroteio e facadas.</div>
+							</div>
+						</div>
+
+						<div class="noticiaarea2">
+							<div class="noticiaitem">
+								<div class="noticiaimg">
+									<img src="assets/images/noticiaimg.jpg" border="0" width="80" height="80">
+								</div>
+								<div class="noticiatitulo">Kahwi Leonard</div>
+								<div class="noticiainfo">Lakers estariam visando adquirir Kawhi Leonard após trazer Anthony Davis. </div>
+							</div>
+
+							<div class="noticiaitem">
+								<div class="noticiaimg">
+									<img src="assets/images/noticiaimg2.jpg" border="0" width="80" height="80">
+								</div>
+								<div class="noticiatitulo">NBA 2018-2019</div>
+								<div class="noticiainfo">Raptors batem Warriors, fecham a série em 4 a 2 e faturam o título inédito da NBA.</div>
+							</div>
+
+							<div class="noticiaitem">
+								<div class="noticiaimg">
+									<img src="assets/images/noticiaimg3.jpg" border="0" width="80" height="80">
+								</div>
+								<div class="noticiatitulo">Lorem ipsum dolor sit amet</div>
+								<div class="noticiainfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec lorem non ex bibendum sollicitudin.</div>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+
+				<div class="widget">
+					<div class="widget_titulo">NOTICIAS</div>
+					<div class="widget_conteudo">
+
+						<div class="noticiaarea1"">
+							<div class="noticiaitem noticiabig">
+								<div class="noticiaimg">
+									<img src="assets/images/noticia4.jpg" border="0" width="80" height="80">
+								</div>
+								<div class="noticiatitulo">Vai e vem do mercado</div>
+								<div class="noticiainfo">O contrato de Filipe Luís com o Atlético de Madrid chegou ao fim e o lateral esquerdo da seleção brasileira ainda não decidiu qual será seu próximo passo na carreira. O Flamengo demonstrou interesse na contratação, mas tem como concorrente o Lyon, da França.
+
+								</div>
+							</div>
+						</div>
+
+						<div class="noticiaarea2">
+							<div class="noticiaitem">
+								<div class="noticiaimg">
+									<img src="assets/images/noticia5.jpg" border="0" width="80" height="80">
+								</div>
+								<div class="noticiatitulo">PSG</div>
+								<div class="noticiainfo">Presidente do PSG garante Mbappé e endurece discurso sobre Neymar.
+
+					</div>
+							</div>
+
+							<div class="noticiaitem">
+								<div class="noticiaimg">
+									<img src="assets/images/noticia7.jpg" border="0" width="80" height="80">
+								</div>
+								<div class="noticiatitulo">Copa América 2019</div>
+								<div class="noticiainfo">Com apoio da torcida carioca, Catar mostrou que trouxe mais que simpatia ao Brasil.
+
+						</div>
+							</div>
+
+							<div class="noticiaitem">
+								<div class="noticiaimg">
+									<img src="assets/images/noticia8.jpg" border="0" width="80" height="80">
+								</div>
+								<div class="noticiatitulo">Jovens</div>
+								<div class="noticiainfo">Rodrygo com apresentação marcada no Real Madrid.</div>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="rightside">
+				<div class="widget">
+					<div class="widget_titulo" style="width: 270px">SOCIAL</div>
+					<div class="widget_conteudo">
+						<a href=""><img src="assets/images/facebook.png" border="0" width="26" height="26"></a>
+						<a href=""><img src="assets/images/google-plus.png" border="0" width="26" height="26"></a>
+						<a href=""><img src="assets/images/linkedin.png" border="0" width="26" height="26"></a>
+						<a href=""><img src="assets/images/deviantart.png" border="0" width="26" height="26"></a>
+						<a href=""><img src="assets/images/twitter.png" border="0" width="26" height="26"></a>
+					</div>
+				</div>
+
+				<div class="widget">
+					<div class="widget_titulo">ULTIMAS NOTICIAS</div>
+					<div class="widget_conteudo">
+						<div class="noticia_item">
+							<a href="">Luis Suárez voltou aos gramados exatamente 38 dias após a cirurgia artroscópica para reparar uma lesão no menisco do joelho direito e não mostrou sinais de ferrugem, já marcando um gol na estreia do Uruguai na Copa América, contra Equador – vitória por 4 a 0.</a>
+						</div>
+						<div class="noticia_item">
+							<a href="">Copa América: o que Daniel Alves quis dizer com discurso no vestiário da seleção brasileira.</a>
+						</div>
+						<div class="noticia_item">
+							<a href="">Nasser Al-Khelaifi, o presidente do PSG, deixou claro que Neymar tem "a porta aberta" para deixar o clube. Ainda reforçou que Mbappé é inegociável, mas o brasileiro não. A mídia francesa diz que o clube topa fazer negócio em caso de uma boa proposta.</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="widget">
+					<div class="widget_titulo">PUBLICIDADE</div>
+					<div class="widget_conteudo">
+						<img src="assets/images/banner.jpg" border="0" width="273">
+					</div>
+				</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="assets/js/home.js"></script>
+
+</html>

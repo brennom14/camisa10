@@ -99,8 +99,8 @@ function buscaPorNome() {
     console.log("Entrou aqui");
     snapshot.forEach(observador => {
       if (observador.val().name == nomeDesejado) {
-        sessionStorage.id = observador.key
         window.location.href = "busca.html";
+        sessionStorage.id = observador.key
       }
     });
   })
@@ -117,18 +117,18 @@ var refUsuarios = bd.ref('/usuarios')
 // Save message to firebase
 function saveUser() {
   // Referenciando a Database e  a pasta onde está sendo adicionado os elementos
-  firebase.auth().signInWithEmailAndPassword(document.getElementById('email').value, document.getElementById('senha').value)
-    .then(() => {
-      alert("Logado")
+  window.location.href = "index.html";
+  // firebase.auth().signInWithEmailAndPassword(document.getElementById('email').value, document.getElementById('senha').value)
+  //   .then(() => {
+  //     alert("Logado")
 
-      firebase.auth().onAuthStateChanged((user) => {
-        sessionStorage.idLogado = user.uid
-        window.location.href = "home.html";
-      })
-    })
-    .catch(() => {
-      alert("Ocorreu um Erro")
-    })
+  //     firebase.auth().onAuthStateChanged((user) => {
+  //       sessionStorage.idLogado = user.uid
+  //     })
+  //   })
+  //   .catch(() => {
+  //     alert("Ocorreu um Erro")
+  //   })
 }
 
 function funcao(event) {
