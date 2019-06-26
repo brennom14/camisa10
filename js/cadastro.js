@@ -161,3 +161,5 @@ document.getElementById('observador').addEventListener('click', () => {
     document.getElementsByClassName('contact')[0].style.display = "block"
   }
 })
+
+console.log(document.getElementsByClassName('contact')[1]);
