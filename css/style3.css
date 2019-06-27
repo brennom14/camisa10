@@ -246,7 +246,7 @@
     }
     .menu {
       display: block;
-      height: 45px;
+      height: 48px;
       background-color: black;
       width: 300vh;
       margin-top: -22vh;
@@ -270,9 +270,9 @@
     
     .menu li {
       float: left;
-      line-height: 40px;
+      line-height: 45px;
       padding-left: 10px;
-      padding-right: 10px;
+      padding-right: 20px;
     }
     
     .menu a {
@@ -286,4 +286,10 @@
     
     .menuint li:hover {
       background-color: blue;
+    }
+    .copy{
+      color: #111;
+      text-align: center;
+      font-size: 3.2vh;
+      margin-top: -4vh;
     }
